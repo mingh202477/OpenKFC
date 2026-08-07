@@ -6,9 +6,9 @@
 
 ---
 
-## 📖 什么是 OpenKFC？
+## 📖 什么是 OpenKFC
 
-OpenKFC 是一个关于未来数字食物体验的开放标准（Open Specification）。
+OpenKFC 是一个开放数字食物体验规范（Open Specification），旨在探索并推动未来数字食物体验标准的发展。
 
 今天，我们可以分享：
 
