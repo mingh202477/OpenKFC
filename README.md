@@ -1,230 +1,160 @@
 # 🍗 OpenKFC
 
-> Open Digital Food Experience Format
+# Open Experience Representation Framework
+
+> **Open Digital Food Experience Format**
 >
 > **不是数字化食物，而是数字化体验。**
 
 ---
 
-## 📖 什么是 OpenKFC
+## 📖 What is OpenKFC?
 
-OpenKFC 是一个开放数字食物体验规范（Open Specification），旨在探索并推动未来数字食物体验标准的发展。
+OpenKFC is an open exploration framework for representing, exchanging, and reconstructing experiences between intelligent systems.
 
-今天，我们可以分享：
+Originally inspired by digital food experiences, OpenKFC explores a broader question:
 
-- 📷 图片（JPEG）
-- 🎵 音乐（MP3）
-- 🎥 视频（MP4）
-- 🌍 三维模型（glTF）
+> **How can an experience become a digital object?**
 
-但是，我们无法分享：
+Today, digital systems can share:
 
-- 😋 味觉
-- 👃 气味
-- 🤲 触觉
-- 🌡 温度
-- 🧠 吃饭时产生的完整体验
+- 📷 Images (JPEG)
+- 🎵 Audio (MP3)
+- 🎥 Video (MP4)
+- 🌍 3D Models (glTF)
 
-OpenKFC 希望探索一种新的开放协议，让未来机器人、AI、脑机接口等智能体能够真正体验食物，而不是仅仅识别食物。
+However, we still cannot directly share:
+
+- 😋 Taste
+- 👃 Smell
+- 🤲 Touch
+- 🌡 Temperature
+- 🦾 Physical interaction
+- 🧠 Experience-driven memory changes
+
+A complete experience is not simply:
+
+```text
+Food
+
+↓
+
+Taste
+````
+
+It is a process:
+
+```text
+Observation
+
+↓
+
+Interaction
+
+↓
+
+Action
+
+↓
+
+Feedback
+
+↓
+
+Reward
+
+↓
+
+Memory Update
+
+↓
+
+Future Preference
+```
+
+OpenKFC explores a possible future where experiences can be captured, represented, compiled, and transferred between intelligent systems.
 
 ---
 
-# 💡 为什么？
+# 💡 Why OpenKFC?
 
-真正的一次吃饭，并不是：
+Current digital formats mainly describe objects.
 
-```
-食物
-↓
+For example:
 
-味觉
-```
+JPEG describes an image.
 
-而是：
+MP3 describes audio.
 
-```
-看见
+glTF describes a 3D object.
 
-↓
+But an experience is different.
 
-拿起
+An experience is not only:
 
-↓
+> What exists.
 
-闻一下
+It is also:
 
-↓
+> What happened.
 
-观察
+And:
 
-↓
+> How it changed the observer.
 
-决定第一口
+Therefore:
 
-↓
+```text
+Object Representation
 
-咀嚼
+≠
 
-↓
-
-奖励
-
-↓
-
-形成记忆
-
-↓
-
-产生下一次想吃的欲望
+Experience Representation
 ```
 
-体验来自交互。
+OpenKFC is not designed to store a food item.
 
-而不是播放。
+It explores how to represent the experience created through interaction with that food.
 
 ---
 
-# 🎯 设计目标
+# 🎯 Design Goal
 
-OpenKFC **不会告诉 AI：**
+OpenKFC does not tell an AI:
 
-> "这个很好吃。"
+> "This food is delicious."
 
-OpenKFC 希望 AI：
+Instead, OpenKFC explores how an intelligent system could:
 
-- 自己观察
-- 自己拿起
-- 自己闻
-- 自己决定第一口咬哪里
-- 自己形成奖励
-- 自己建立记忆
-- 自己决定是否还想吃
+* observe
+* interact
+* receive feedback
+* update internal state
+* form memory
+* develop future preferences
 
-真正的体验，
+A robot should not be a playback device.
 
-应该由智能体自己创造。
+It should be a participant.
 
----
-
-# 🍗 核心理念
-
-## 食物不是模型
-
-现实世界不存在两块完全一样的炸鸡。
-
-每一块鸡块：
-
-- 大小不同
-- 厚度不同
-- 炸制程度不同
-- 鸡汁不同
-- 温度不同
-
-OpenKFC 更倾向于保存：
-
-**生成规则（Generator）**
-
-而不是：
-
-**固定模型（Model）**
-
-每一次生成，
-
-都是唯一的一块炸鸡。
+The experience should be created by the intelligent system itself.
 
 ---
 
-## 世界具有随机性
+# 🏗 Architecture
 
-现实世界并不是完全确定的。
+OpenKFC is based on three major layers:
 
-例如：
-
-- 今天炸得更酥
-- 今天鸡汁更多
-- 今天薯条更长
-- 今天温度更高
-- 今天多送了一块鸡块 🍗
-
-这些随机事件，
-
-也是体验的一部分。
-
----
-
-## AI 自己决定
-
-机器人不是播放器。
-
-而是参与者。
-
-例如：
-
-```
-拿起来
+```text
+Reality
 
 ↓
 
-闻一下
+Experience Capture
 
 ↓
 
-转一圈
-
-↓
-
-观察
-
-↓
-
-决定第一口
-
-↓
-
-继续吃
-
-↓
-
-形成体验
-```
-
-体验，
-
-来自行动。
-
----
-
-# 📦 文件结构（设想）
-
-```
-Chicken.kfc
-│
-├── manifest.json
-├── model/
-├── texture/
-├── physics/
-├── thermal/
-├── aroma/
-├── taste/
-├── interaction/
-├── metadata/
-└── extension/
-```
-
-`.kfc` 本质上是一个开放资源包。
-
-未来可以采用 ZIP / 7Z 等容器实现。
-
----
-
-# 🧠 Experience Compiler
-
-OpenKFC 最大的核心并不是文件格式。
-
-而是：
-
-```
-.kfc
+Experience Representation
 
 ↓
 
@@ -232,99 +162,560 @@ Experience Compiler
 
 ↓
 
-Digital Body
+Target Intelligent System
+
+AI / Robot / Simulation / BCI
+```
+
+---
+
+# 📡 Experience Capture
+
+The Capture layer records experience-related information.
+
+Possible sources:
+
+* Vision sensors
+* Audio sensors
+* Touch sensors
+* Thermal sensors
+* Chemical sensors
+* Motion data
+* Environment data
+* Interaction history
+
+Example:
+
+A robot interacts with food:
+
+```text
+See
 
 ↓
 
-Vision
+Approach
 
-Touch
+↓
+
+Pick up
+
+↓
+
+Feel temperature
+
+↓
 
 Smell
+
+↓
 
 Taste
 
 ↓
 
-Reward Engine
+Receive feedback
 
 ↓
 
-Working Memory
-
-↓
-
-Memory Compiler
-
-↓
-
-Long-term Memory
-
-↓
-
-Desire
-
-↓
-
-Decision
+Update memory
 ```
 
-未来智能体不会保存：
+Capture does not decide meaning.
 
-> "炸鸡很好吃"
-
-它会保存：
-
-**体验带来的改变。**
-
-例如：
-
-- 对炸鸡偏好增加
-- 奖励预测提高
-- 更容易产生想吃的欲望
-- 与快乐建立新的联系
-
-而不是保存几百万个细节。
+It records experience signals.
 
 ---
 
-# ❤️ OpenKFC 希望解决什么？
+# 📦 Experience Representation
 
-不是：
+The core question of OpenKFC:
 
-> 如何记录一道菜。
+> What information is necessary to represent an experience?
 
-而是：
+OpenKFC does not attempt to perfectly copy reality.
 
-> 如何记录一次体验。
+Because reality contains unlimited details.
 
-不是：
+Instead:
 
-> 如何播放体验。
+> Store enough information to reconstruct meaningful experience.
 
-而是：
+Similar to:
 
-> 如何创造体验。
+A JPEG file does not contain every photon.
+
+An MP3 file does not contain every air vibration.
+
+A 3D model does not contain every atom.
+
+OpenKFC does not attempt to store every physical detail.
+
+It focuses on experience-relevant information.
 
 ---
 
-# 🚧 当前状态
+# 🧬 Experience Container (.kfc)
 
-OpenKFC 目前仍然只是一个概念（Concept）。
+A `.kfc` file is an open experience container.
 
-目前仍存在大量开放问题，例如：
+Example:
 
-- 数字味觉表示
-- 数字嗅觉表示
-- 数字触觉表示
-- Experience Compiler
-- Reward Engine
-- Artificial Memory
-- Desire Model（渴望模型）
-- Digital Body
-- Artificial Consciousness（未来研究方向）
+```text
+Experience.kfc
 
-欢迎任何开发者、机器人研究者、AI 研究者以及神经科学研究者共同讨论。
+├── manifest.json
+├── environment/
+├── sensory/
+├── interaction/
+├── physics/
+├── thermal/
+├── aroma/
+├── taste/
+├── reward/
+├── memory/
+├── metadata/
+└── extensions/
+```
+
+The container format may use existing technologies:
+
+* ZIP
+* 7Z
+* Other future container formats
+
+The container itself is not the goal.
+
+The experience representation inside is the goal.
+
+---
+
+# ⚙️ Experience Compiler
+
+The Experience Compiler is the core concept of OpenKFC.
+
+Traditional compilers transform:
+
+```text
+Source Code
+
+↓
+
+Intermediate Representation
+
+↓
+
+Machine Code
+```
+
+OpenKFC explores:
+
+```text
+Experience Data
+
+↓
+
+Experience Representation
+
+↓
+
+Target Intelligent System
+```
+
+Different intelligent systems may have different internal structures.
+
+Therefore, experience exchange may require translation.
+
+Example:
+
+```text
+          Experience IR
+
+                |
+
+      ---------------------
+
+      |                   |
+
+   AI System A        Robot System B
+```
+
+The compiler translates a shared experience representation into a form understood by different systems.
+
+---
+
+# 🍗 Example: Food Experience
+
+A food object is not only:
+
+```text
+Chicken
+```
+
+A complete experience may include:
+
+```text
+Appearance
+
+↓
+
+Temperature
+
+↓
+
+Texture
+
+↓
+
+Smell
+
+↓
+
+Interaction
+
+↓
+
+Reward
+
+↓
+
+Memory
+
+↓
+
+Preference Change
+```
+
+Reality does not contain two identical pieces of food.
+
+Every chicken may have differences:
+
+* size
+* temperature
+* texture
+* moisture
+* cooking condition
+
+OpenKFC focuses less on storing one exact object.
+
+Instead, it explores how to represent the experience pattern.
+
+---
+
+# 🎲 The World Is Not Deterministic
+
+The real world contains randomness.
+
+Examples:
+
+* Today's chicken is crispier.
+* Today's fries are longer.
+* Today's temperature is different.
+* An extra piece is included.
+
+These differences are not necessarily errors.
+
+They are part of the experience.
+
+Therefore, OpenKFC explores:
+
+```text
+Generation Rules
+
+>
+
+Fixed Model
+```
+
+A future system may generate different instances while preserving similar experience characteristics.
+
+```
+```
+继续，保持同一个 README：
+
+````markdown
+---
+
+# 🧠 Memory and Reward
+
+An intelligent system does not need to remember:
+
+> "Chicken was delicious."
+
+Instead, it may store:
+
+- reward changes
+- preference updates
+- memory associations
+- future behavior influence
+
+Example:
+
+```text
+Experience
+
+↓
+
+Reward
+
+↓
+
+Memory Update
+
+↓
+
+Future Decision
+````
+
+OpenKFC explores experience as a process that changes the intelligent system.
+
+---
+
+# 🔄 Experience Exchange
+
+Different intelligent systems may not share the same internal structure.
+
+A human brain, a robot system, and an AI model may represent the world differently.
+
+Therefore, direct experience copying may not be possible.
+
+OpenKFC explores an intermediate representation approach:
+
+```text
+Experience Source
+
+↓
+
+OpenKFC Experience Representation
+
+↓
+
+Target System Adaptation
+
+↓
+
+New Experience State
+```
+
+The goal is not to force every intelligent system to think identically.
+
+The goal is to provide a common language for experience exchange.
+
+---
+
+# 🧩 Design Principles
+
+## Experience Over Replay
+
+OpenKFC does not aim to replay reality.
+
+A recording is not an experience.
+
+An experience is the interaction between:
+
+* an environment
+* an intelligent system
+* internal state changes
+
+---
+
+## Experience Similarity Over Physical Accuracy
+
+The goal is not:
+
+> "Is this physically identical?"
+
+The goal is:
+
+> "Does this create a similar experience effect?"
+
+Two different physical objects may produce similar experiences.
+
+Two identical objects may produce different experiences for different systems.
+
+---
+
+## Standard Over Implementation
+
+OpenKFC defines:
+
+* representation
+* interfaces
+* compatibility rules
+
+It does not attempt to solve:
+
+* neuroscience
+* consciousness
+* biological perception
+* the complete nature of experience
+
+These remain open research questions.
+
+---
+
+## Compatibility First
+
+Future technologies will change.
+
+Therefore, OpenKFC should support:
+
+* extensions
+* version evolution
+* backward compatibility
+* experimental implementations
+
+A future implementation should not make previous experiences unusable.
+
+---
+
+# 📐 Possible Specification Structure
+
+A future OpenKFC specification may include:
+
+```text
+Experience.kfc
+
+├── manifest
+│
+├── identity
+│
+├── environment
+│
+├── sensory
+│   ├── vision
+│   ├── audio
+│   ├── touch
+│   ├── thermal
+│   └── chemical
+│
+├── interaction
+│
+├── state
+│
+├── reward
+│
+├── memory
+│
+├── generator
+│
+└── extensions
+```
+
+The exact structure is not fixed.
+
+OpenKFC focuses on defining concepts and interfaces.
+
+---
+
+# 🚧 Open Problems
+
+OpenKFC is currently an exploration framework.
+
+Many fundamental questions remain:
+
+## Experience Representation
+
+* What information is necessary to represent an experience?
+* Which parts of experience are universal?
+* Which parts depend on the individual system?
+
+## Sensory Representation
+
+* How should taste be represented?
+* How should smell be encoded?
+* How can touch become a digital representation?
+
+## Reward and Memory
+
+* How does an experience create reward?
+* How does reward affect future decisions?
+* How should memory formation be represented?
+
+## Cross-System Transfer
+
+* Can one intelligent system understand another system's experience?
+* How can different AI architectures share experience?
+* What is the equivalent of an "experience compiler"?
+
+---
+
+# 🔬 Research Areas
+
+OpenKFC connects multiple research fields:
+
+* Artificial Intelligence
+* Embodied AI
+* Robotics
+* Cognitive Science
+* Neuroscience
+* Human-Computer Interaction
+* Brain-Computer Interfaces
+* Digital Simulation
+
+---
+
+# 📌 Current Status
+
+OpenKFC is currently a conceptual research project.
+
+Current exploration:
+
+* Experience representation concepts
+* Open specification design
+* Architecture modeling
+* Future intelligent system interfaces
+
+Not solved:
+
+* Experience capture hardware
+* Universal experience representation
+* Experience compiler implementation
+* Biological sensory modeling
+* Human-like subjective experience
+
+---
+
+# 🛣 Future Vision
+
+Future intelligent systems may not only need to:
+
+> Know the world.
+
+They may also need to:
+
+> Experience the world.
+
+A robot may not simply identify food.
+
+It may:
+
+```
+Observe
+
+↓
+
+Interact
+
+↓
+
+Receive feedback
+
+↓
+
+Learn
+
+↓
+
+Remember
+
+↓
+
+Develop preferences
+```
+
+The purpose of OpenKFC is not to make machines pretend to be human.
+
+It is to explore how experiences may become a new type of digital information.
 
 ---
 
@@ -334,24 +725,26 @@ MIT License
 
 ---
 
-# ❤️ 最后
+# ❤️ Final Thought
 
-未来。
+Human civilization has created many ways to share information.
 
-机器人拿起一块炸鸡。
+We can share:
 
-先闻一下。
+* images
+* sounds
+* videos
+* models
 
-再轻轻咬第一口。
+But experiences remain difficult to communicate.
 
-停顿几秒。
+OpenKFC explores a future possibility:
 
-然后笑着说：
-
-> **"原来……这就是人类一直说的『真香』。🍗"**
+> What if experiences could also become something we can create, exchange, and understand?
 
 ---
 
-> **OpenKFC 不是为了数字化食物。**
+> **OpenKFC is not about digitizing food.**
 >
-> **而是为了数字化体验。**
+> **It is about exploring how experiences may become digital.**
+
