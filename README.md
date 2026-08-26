@@ -721,7 +721,7 @@ It is to explore how experiences may become a new type of digital information.
 
 # 📜 License
 
-MIT License
+Apache License 2.0
 
 ---
 
