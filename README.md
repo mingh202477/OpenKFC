@@ -1,13 +1,21 @@
-# 🍗 OpenKFC
+# 🍗 OpenKFC (EXTP: Experience Transfer Protocol)
 
-# Open Experience Representation Framework
-
-> **Open Digital Food Experience Format**
+> **Open Experience Representation Framework**
 >
-> **不是数字化食物，而是数字化体验。**
+> **An Open Specification for Cross-Agent Experience Representation, Transfer, and Compilation.**
+>
+> 一个用于异构智能体之间体验表示、传输与编译的开放协议规范。
+
+**Topics / Tags**:
+
+`experience-representation`
+`agent-communication`
+`experience-transfer`
+`cross-compiler`
+`embodied-ai`
+`artificial-intelligence`
 
 ---
-
 ## 📖 What is OpenKFC?
 
 OpenKFC is an open exploration framework for representing, exchanging, and reconstructing experiences between intelligent systems.
