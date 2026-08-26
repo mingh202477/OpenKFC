@@ -437,10 +437,7 @@ Fixed Model
 A future system may generate different instances while preserving similar experience characteristics.
 
 ```
-```
-继续，保持同一个 README：
 
-````markdown
 ---
 
 # 🧠 Memory and Reward
